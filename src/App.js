@@ -8,11 +8,6 @@ function App() {
   const [homeScore, homeScoreValue] = useState(0);
   const [awayScore, awayScoreValue] = useState(0);
 
-  //how to set useState to 1 on other js doc, how to connect js docs
-  const [quarter, quarterValue] = useState(1)
-  const quarterButton = document.getElementsByClassName('quarter__value');
-  quarterButton.innerHtml = quarter;
-
 
   return (
     <div className="container">
@@ -42,11 +37,6 @@ function App() {
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => awayScoreValue(awayScore + 7)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => awayScoreValue(awayScore + 3)}>Away Field Goal</button>
-        </div>
-      </section>
-      <section className="buttons">
-        <div className="homeButtons">
-          <button className="homeButtons__fieldGoal" onClick={() => quarterValue(quarter + 1)}>Quarter</button>
         </div>
       </section>
     </div>
